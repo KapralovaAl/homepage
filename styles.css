@@ -57,24 +57,29 @@ body {
 
 #content {
   background-color: #fff;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 27%), 0 0 40px rgb(0 0 0 / 6%) inset;
 }
 
 h1 {
   font-size: 37px;
 }
+
 h2 {
   font-size: 30px;
 }
+
 h3 {
   font-size: 20px;
 }
+
 h4 {
   font-size: 15px;
 }
+
 h5 {
   font-size: 13px;
 }
+
 h6 {
   font-size: 12px;
 }
@@ -106,6 +111,19 @@ div.top {
   overflow: hidden;
 }
 
+.skills li h4 {
+  width: 140px;
+  float: left;
+  font-size: 15px;
+  color: #444;
+}
+
+.timeline li .timeline-unit h4 {
+  line-height: 24px;
+  font-size: 15px;
+  color: #444;
+}
+
 #logo {
   float: left;
   overflow: hidden;
@@ -132,7 +150,7 @@ div.top {
   background-position: center bottom, left top;
   background-repeat: repeat-x;
   overflow: hidden;
-  background-color: #fdd42f;
+  background-color: #99d9ea;
 }
 
 /* About */
@@ -233,7 +251,7 @@ div.top {
   float: left;
 }
 
-.timeline li .timelineUnit {
+.timeline li .timeline-unit {
   float: left;
   line-height: 17px;
   margin-left: 11px;
@@ -243,7 +261,7 @@ div.top {
   padding-left: 15px;
 }
 
-.timeline li .timelineUnit .timelineDate {
+.timeline li .timeline-unit .timeline-date {
   line-height: 17px;
   color: #f4c024;
   font-size: 14px;
@@ -252,19 +270,13 @@ div.top {
   padding: 2px 6px;
 }
 
-.timeline li .timelineUnit h4 {
-  line-height: 24px;
-  font-size: 15px;
-  color: #444;
-}
-
-.timeline li .timelineUnit h5 {
+.timeline li .timeline-unit h5 {
   line-height: 18px;
   font-size: 13px;
   color: #999;
 }
 
-.timeline li .timelineUnit p {
+.timeline li .timeline-unit p {
   color: #666;
   font-size: 12px;
   margin-top: 5px;
@@ -285,13 +297,6 @@ div.top {
   margin-bottom: 15px;
   float: left;
   padding-left: 30px;
-}
-
-.skills li h4 {
-  width: 140px;
-  float: left;
-  font-size: 15px;
-  color: #444;
 }
 
 .skills li .rat0,
@@ -343,7 +348,7 @@ div.top {
   clear: both;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (width >= 768px) and (width <= 959px) {
   #container {
     width: 750px;
   }
@@ -378,9 +383,13 @@ div.top {
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (width >= 480px) and (width <= 767px) {
   #container {
     width: 470px;
+  }
+
+  .skills li h4 {
+    width: 260px;
   }
 
   #logo h2 {
@@ -426,17 +435,17 @@ div.top {
   .skills-section {
     width: 420px;
   }
-
-  .skills li h4 {
-    width: 260px;
-  }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
+@media only screen and (width <= 479px) {
   #container {
     width: 300px;
     margin-top: 10px;
+  }
+
+  .skills li h4 {
+    width: 120px;
   }
 
   #logo h2 {
@@ -512,9 +521,5 @@ div.top {
 
   .skills-section {
     width: 280px;
-  }
-
-  .skills li h4 {
-    width: 120px;
   }
 }
